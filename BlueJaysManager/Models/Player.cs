@@ -11,8 +11,6 @@ namespace BlueJaysManager.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int PlayerID { get; set; }
-
         public int PlayerNum { get; set; }
 
         [Required]
