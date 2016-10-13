@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BlueJaysManager
+namespace BlueJaysManager.BlueJays
 {
 
 
-    public partial class Services
+    public partial class MainMenu
     {
     }
 }

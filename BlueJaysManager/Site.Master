@@ -34,7 +34,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li id="home" runat="server"><a href="Default.aspx"><i class="fa fa-home fa-lg"></i> Home</a></li>
                         <li id="players" runat="server"><a href="/BlueJays/Players.aspx"><i class="fa fa-users fa-lg"></i> Players</a></li>
-                        <li id="coaches" runat="server"><a href="Coaches.aspx"><i class="fa fa-book fa-lg"></i> Coaches</a></li>
+                        <li id="coaches" runat="server"><a href="/BlueJays/Coaches.aspx"><i class="fa fa-book fa-lg"></i> Coaches</a></li>
                         <li id="about" runat="server"><a href="About.aspx"><i class="fa fa-info fa-lg"></i> About</a></li>
                         <li id="contact" runat="server"><a href="Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
                     </ul>
@@ -46,7 +46,7 @@
 
         <!-- Main Content -->
         <main>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </main>
     </form>

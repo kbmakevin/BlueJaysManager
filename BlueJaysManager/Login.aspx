@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BlueJaysManager.Login" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container">    
         <div class="row">
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="text-right">
-                            <asp:Button Text="Login" ID="LoginButton" runat="server" CssClass="btn btn-primary"  TabIndex="0" />
+                            <asp:Button Text="Login" ID="LoginButton" runat="server" CssClass="btn btn-primary"  TabIndex="0" OnClick="LoginButton_Click" />
                         </div>
 
                     </div>

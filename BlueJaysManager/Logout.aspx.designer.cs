@@ -11,7 +11,7 @@ namespace BlueJaysManager
 {
 
 
-    public partial class Projects
+    public partial class Logout
     {
     }
 }
