@@ -21,11 +21,11 @@ namespace BlueJaysManager
                 case "Home":
                     home.Attributes.Add("class", "active");
                     break;
-                case "Projects":
-                    projects.Attributes.Add("class", "active");
+                case "Players":
+                    players.Attributes.Add("class", "active");
                     break;
-                case "Services":
-                    services.Attributes.Add("class", "active");
+                case "Coaches":
+                    coaches.Attributes.Add("class", "active");
                     break;
                 case "About":
                     about.Attributes.Add("class", "active");

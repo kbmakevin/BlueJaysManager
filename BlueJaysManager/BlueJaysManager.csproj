@@ -77,10 +77,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Assets\images\torontologo.png" />
+    <Content Include="Coaches.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\app.css" />
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Players.aspx" />
     <Content Include="Projects.aspx" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\jquery-2.2.4.min.map" />
@@ -131,6 +134,13 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Coaches.aspx.cs">
+      <DependentUpon>Coaches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coaches.aspx.designer.cs">
+      <DependentUpon>Coaches.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,12 +160,19 @@
     </Compile>
     <Compile Include="Models\BattingStat.cs" />
     <Compile Include="Models\BlueJaysContext.cs" />
-    <Compile Include="Models\CoachRoster.cs" />
+    <Compile Include="Models\Coach.cs" />
     <Compile Include="Models\FieldingStat.cs" />
     <Compile Include="Models\PitchingStat.cs" />
     <Compile Include="Models\PlayerBio.cs" />
-    <Compile Include="Models\PlayerRoster.cs" />
-    <Compile Include="Models\PlayerStatsSummary.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerStatSummary.cs" />
+    <Compile Include="Players.aspx.cs">
+      <DependentUpon>Players.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players.aspx.designer.cs">
+      <DependentUpon>Players.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Projects.aspx.cs">
       <DependentUpon>Projects.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,7 +198,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

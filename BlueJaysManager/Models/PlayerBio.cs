@@ -9,6 +9,7 @@ namespace BlueJaysManager.Models
     [Table("PlayerBio")]
     public partial class PlayerBio
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PlayerBioID { get; set; }
 

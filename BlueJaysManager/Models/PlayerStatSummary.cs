@@ -6,8 +6,9 @@ namespace BlueJaysManager.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class PlayerStatsSummary
+    public partial class PlayerStatSummary
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PlayerStatsSummaryID { get; set; }
 

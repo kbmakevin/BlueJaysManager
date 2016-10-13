@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BlueJaysManager
-{
-
-
-    public partial class Site
-    {
-
+namespace BlueJaysManager {
+    
+    
+    public partial class Site {
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace BlueJaysManager
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// home control.
         /// </summary>
@@ -31,25 +29,25 @@ namespace BlueJaysManager
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl home;
-
+        
         /// <summary>
-        /// projects control.
+        /// players control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl projects;
-
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl players;
+        
         /// <summary>
-        /// services control.
+        /// coaches control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl services;
-
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl coaches;
+        
         /// <summary>
         /// about control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace BlueJaysManager
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl about;
-
+        
         /// <summary>
         /// contact control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace BlueJaysManager
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl contact;
-
+        
         /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>

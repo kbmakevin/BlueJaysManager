@@ -6,29 +6,21 @@ namespace BlueJaysManager.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("PlayerRoster")]
-    public partial class PlayerRoster
+    [Table("CoachRoster")]
+    public partial class Coach
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int PlayerID { get; set; }
+        public int CoachID { get; set; }
 
-        public int PlayerNum { get; set; }
+        public int CoachNumber { get; set; }
 
         [Required]
+        [StringLength(30)]
         public string Name { get; set; }
 
         [Required]
+        [StringLength(30)]
         public string Position { get; set; }
-
-        public int Height { get; set; }
-
-        public int Weight { get; set; }
-
-        [Required]
-        public string SkillOrientation { get; set; }
-
-        [Required]
-        public string DateOfBirth { get; set; }
     }
 }
