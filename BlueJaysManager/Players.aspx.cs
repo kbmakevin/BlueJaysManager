@@ -40,5 +40,32 @@ namespace BlueJaysManager
                 PlayersGridView.DataBind();
             }
         }
+
+        protected void PlayersGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            // store which row was clicked
+            int selectedRow = e.RowIndex;
+
+            // get the selected PlayerNum using the Grid's DataKey collection
+            int PlayerNum = Convert.ToInt32(PlayersGridView.DataKeys[selectedRow].Values["PlayerNum"]);
+
+            // use EF and LINQ to find the selected student in the DB and remove it
+            using (BlueJaysContext db = new BlueJaysContext())
+            {
+                // create object of the Player class and store the query inside of it
+                Player deletedPlayer = (from playerRecords in db.Players
+                                        where playerRecords.PlayerNum == PlayerNum
+                                        select playerRecords).FirstOrDefault();
+
+                // remove the selected student from the db
+                db.Players.Remove(deletedPlayer);
+
+                // save my changes back to the db
+                db.SaveChanges();
+
+                // refresh the grid
+                this.GetPlayerRoster();
+            }
+        }
     }
 }

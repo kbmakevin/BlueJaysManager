@@ -83,6 +83,7 @@
     <Content Include="Content\app.css" />
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
+    <Content Include="PlayerDetails.aspx" />
     <Content Include="Players.aspx" />
     <Content Include="Projects.aspx" />
     <Content Include="Scripts\app.js" />
@@ -166,6 +167,13 @@
     <Compile Include="Models\PlayerBio.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerStatSummary.cs" />
+    <Compile Include="PlayerDetails.aspx.cs">
+      <DependentUpon>PlayerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlayerDetails.aspx.designer.cs">
+      <DependentUpon>PlayerDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Players.aspx.cs">
       <DependentUpon>Players.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
