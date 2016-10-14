@@ -21,7 +21,7 @@ namespace BlueJaysManager
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             // Redirect back to the players page
-            Response.Redirect("BlueJays/Players.aspx");
+            Response.Redirect("Players.aspx");
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace BlueJaysManager
                 db.SaveChanges();
 
                 // Redirect back to the updated players page
-                Response.Redirect("BlueJays/Players.aspx");
+                Response.Redirect("Players.aspx");
             }
         }
     }
