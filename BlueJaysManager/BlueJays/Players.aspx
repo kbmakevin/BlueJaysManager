@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-2 col-md-8">
+            <div class="col-md-offset-1 col-md-10">
 
                 <h1>Player Roster</h1>
                 <a href="PlayerDetails.aspx" class="btn btn-success btn-sm">
@@ -22,6 +22,10 @@
                         <asp:BoundField DataField="Weight" HeaderText="Weight (lbs)" Visible="true" />
                         <asp:BoundField DataField="DateOfBirth" HeaderText="Date of Birth" Visible="true"
                             DataFormatString="{0:MMM dd, yyyy}" />
+
+                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="/BlueJays/PlayerDetails.aspx" ControlStyle-CssClass="btn btn-primary btn-sm" runat="server" DataNavigateUrlFields="PlayerNum"
+                            DataNavigateUrlFormatString="PlayerDetails.aspx?PlayerNum={0}" />
+
                         <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete" ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
                     </Columns>
                 </asp:GridView>

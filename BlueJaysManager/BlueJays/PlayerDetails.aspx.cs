@@ -15,7 +15,42 @@ namespace BlueJaysManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack && Request.QueryString.Count > 0)
+            {
+                this.GetPlayer();
 
+                // hide the playerNum textbox to prevent accidentally changing 
+                // table record's key
+                CreatePlayerPlaceHolder.Visible = false;
+            }
+        }
+
+        private void GetPlayer()
+        {
+            // populate the form with existing data from db
+            int PlayerID = Convert.ToInt32(Request.QueryString["PlayerNum"]);
+
+            // connect to the EF DB
+            using (BlueJaysContext db = new BlueJaysContext())
+            {
+                // populate a player object isntance with the PlayerID from the
+                // URL parameter
+                Player updatedPlayer = (from player in db.Players
+                                        where player.PlayerNum == PlayerID
+                                        select player).FirstOrDefault();
+
+                // map the player properties to the form control
+                if (updatedPlayer != null)
+                {
+                    PlayerNumTextBox.Text = updatedPlayer.PlayerNum.ToString();
+                    NameTextBox.Text = updatedPlayer.Name;
+                    PositionTextBox.Text = updatedPlayer.Position;
+                    HeightTextBox.Text = updatedPlayer.Height.ToString();
+                    WeightTextBox.Text = updatedPlayer.Weight.ToString();
+                    DateOfBirthTextBox.Text = updatedPlayer.DateOfBirth.ToString("yyyy-MM-dd");
+                    SkillOrientationTextBox.Text = updatedPlayer.SkillOrientation;
+                }
+            }
         }
 
         protected void CancelButton_Click(object sender, EventArgs e)
@@ -34,9 +69,15 @@ namespace BlueJaysManager
                 Player newPlayer = new Player();
 
                 int PlayerNum = 0;
-                if (Request.QueryString.Count > 0) // our URL has a PlayerID in it
+                if (Request.QueryString.Count > 0) // our URL has a PlayerNum in it
                 {
-                    // get the id from the URL
+                    // get the num from the URL
+                    PlayerNum = Convert.ToInt32(Request.QueryString["PlayerNum"]);
+
+                    // get the current player from EF db
+                    newPlayer = (from player in db.Players
+                                 where player.PlayerNum == PlayerNum
+                                 select player).FirstOrDefault();
                 }
 
                 // add form data to the new player record
